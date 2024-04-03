@@ -6,7 +6,6 @@ botaoAdicionar.addEventListener("click",() =>{
 
     const strDigitado = caixadeTexto.value;
     const novaTarefa = document.createElement("li");
-    novoAluno.classList.add("item-list");
 
     const spanTarefa = document.createElement("span");
         spanTarefa.textContent = strDigitado;
