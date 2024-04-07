@@ -10,7 +10,25 @@ botaoAdicionar.addEventListener("click",() =>{
     const spanTarefa = document.createElement("span");
         spanTarefa.textContent = strDigitado;
 
+    const checkboxConcluida = document.createElement("input");
+        checkboxConcluida.type = "checkbox";
+        checkboxConcluida.addEventListener("change", () => {
+            if (checkboxConcluida.checked) {
+                spanTarefa.style.textDecoration = "line-through";
+            } else {
+                spanTarefa.style.textDecoration = "none";
+            }
+        });
+
+    const botaoRemover = document.createElement("button");
+        botaoRemover.textContent = "Remover tarefa";
+        botaoRemover.addEventListener("click", () => {
+            novaTarefa.remove();
+        });
+
     novaTarefa.appendChild(spanTarefa);
+    novaTarefa.appendChild(botaoRemover);
+    novaTarefa.appendChild(checkboxConcluida);
 
     caixadeTexto.value ='';
     listadeTarefas.appendChild(novaTarefa);
