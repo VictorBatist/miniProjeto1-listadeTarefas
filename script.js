@@ -10,6 +10,8 @@ botaoAdicionar.addEventListener("click",() =>{
     const spanTarefa = document.createElement("span");
         spanTarefa.textContent = strDigitado;
 
+    // CheckBox para marcar atividade como concluida 
+
     const checkboxConcluida = document.createElement("input");
         checkboxConcluida.type = "checkbox";
         checkboxConcluida.addEventListener("change", () => {
@@ -19,6 +21,8 @@ botaoAdicionar.addEventListener("click",() =>{
                 spanTarefa.style.textDecoration = "none";
             }
         });
+
+    // Botao para remover atividade
 
     const botaoRemover = document.createElement("button");
         botaoRemover.textContent = "Remover tarefa";
